@@ -17,7 +17,7 @@ class AppointmentsTableSeeder extends Seeder
             Appointment::create([
                 "user_id" => $faker->numberBetween(1,50),
                 "service_id" => $faker->numberBetween(1,50),
-                "date" =>$faker->date(),
+                "date" =>$faker->dateTime(),
                 "Description"=>$faker->text(200)
             ]);
 
