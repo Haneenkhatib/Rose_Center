@@ -17,7 +17,7 @@ class CreateTableAppointments extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('service_id');
-            $table->date('date');
+            $table->dateTime('date');
             $table->text('Description');
             $table->timestamps();
             $table->softDeletes();
