@@ -1,5 +1,6 @@
 <?php
 
+use App\Service;
 use Illuminate\Database\Seeder;
 
 class ServicesTableSeeder extends Seeder
@@ -13,7 +14,7 @@ class ServicesTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
         foreach (range(0, 10) as $index) {
-            Appointment::create([
+            Service::create([
                 "title" => $faker->title,
                 "description" => $faker->text(200),
                 "price" =>$faker->numberBetween(10,70),

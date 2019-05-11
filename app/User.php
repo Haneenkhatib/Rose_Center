@@ -12,7 +12,7 @@ class User extends Authenticatable
     protected $fillable = ['name', 'password','email', 'photo','type'];
     protected $dates = ['created_at', 'updated_at','deleted_at'];
 
-     // services // appointments
+    // services // appointments
     public function services(){
         return $this->hasMany("App\Service");
     }
