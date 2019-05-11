@@ -7,3 +7,4 @@
         <i class="icon-arrow-up"></i>
     </div>
 </div>
+</div>

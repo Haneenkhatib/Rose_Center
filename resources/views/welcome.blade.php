@@ -1,0 +1,1 @@
+@extends('Layouts.ControlLayout.Layout')
