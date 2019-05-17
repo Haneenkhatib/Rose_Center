@@ -38,27 +38,33 @@
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-shopping-cart"></i>
-                <span class="title">Speaker</span>
+                <span class="title">Appointment</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
-                    <a href="" class="nav-link ">
-                        <i class="fa fa-plus"></i>
-                        <span class="title">Create</span>
+                    <a href="{{route('appointments.index')}}" class="nav-link ">
+                        <i class="fa fa-circle"></i>
+                        <span class="title">Show</span>
                     </a>
                 </li>
             </ul>
         </li>
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="title">Conference</span>
+                <i class="fa fa-user"></i>
+                <span class="title">User</span>
                 <span class="arrow"></span>
             </a>
-
+            <ul class="sub-menu">
+                <li class="nav-item start ">
+                    <a href="{{route('controlpanelusers.index')}}" class="nav-link ">
+                        <i class="fa fa-circle"></i>
+                        <span class="title">Show</span>
+                    </a>
+                </li>
+            </ul>
         </li>
-
 
         <!-- END SIDEBAR MENU -->
     <!-- END SIDEBAR MENU -->

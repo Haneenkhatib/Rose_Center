@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::resource('/appointments','ControlPanelControllers\AppointmentController');
+Route::resource('/controlpanelusers','ControlPanelControllers\UserController');

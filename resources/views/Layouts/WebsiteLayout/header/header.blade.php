@@ -14,7 +14,7 @@
             <li class="active"><a href="home.html">Home</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Services</a></li>
-            <li><a href="">News</a></li>
+            <li><a href="">Appointments</a></li>
             <li><a href="">Contact</a></li>
         </ul>
         <div class="header-right">
