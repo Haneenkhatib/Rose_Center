@@ -48,4 +48,13 @@
 .danger{
   color: red;
 }
+.page-header.navbar ,.page-footer{
+    background-color: #212529;
+}
+.page-header.navbar .page-logo .logo-default{
+    margin: auto;
+}
+.page-header-fixed {
+    background-color: #1d2124;
+}
 </style>

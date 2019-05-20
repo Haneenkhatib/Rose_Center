@@ -14,5 +14,9 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::resource('/appointments','ControlPanelControllers\AppointmentController');
-Route::resource('/controlpanelusers','ControlPanelControllers\UserController');
+Route::group(['prefix' => 'controlpanel'], function () {
+    Route::resource('/appointments','ControlPanelControllers\AppointmentController');
+    Route::resource('/users','ControlPanelControllers\UserController');
+});
+
+

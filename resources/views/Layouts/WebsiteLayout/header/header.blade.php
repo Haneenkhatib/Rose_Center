@@ -3,7 +3,7 @@
     <div class="header-warp">
         <!-- logo -->
         <a href="" class="site-logo">
-            <img src="{{asset('websiteControl/img/logo.png')}}" alt="">
+            <img src="{{asset('websiteControl/img/Rose_logo.png')}}" alt="">
         </a>
         <!-- responsive -->
         <div class="nav-switch">
