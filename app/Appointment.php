@@ -12,11 +12,11 @@ class Appointment extends Model
     protected $dates = ['created_at', 'updated_at','deleted_at'];
 
     //users //appointments
-    public function users(){
+    public function user(){
         return $this->belongsTo("App\User");
     }
-    public function services(){
-        return $this->belongsTo("App\Appointment");
+    public function service(){
+        return $this->belongsTo("App\Service");
     }
 
 }
