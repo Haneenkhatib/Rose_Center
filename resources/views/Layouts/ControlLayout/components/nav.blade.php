@@ -38,25 +38,23 @@
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-shopping-cart"></i>
-                <span class="title">Speaker</span>
+                <span class="title">Service</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
-                    <a href="" class="nav-link ">
+                    <a href="{{route('Services.index')}}" class="nav-link ">
+                        <i class="fa fa-female"></i>
+                        <span class="title">Show</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="{{route('Services.create')}}" class="nav-link ">
                         <i class="fa fa-plus"></i>
-                        <span class="title">Create</span>
+                        <span class="title">Add</span>
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="nav-item start ">
-            <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="title">Conference</span>
-                <span class="arrow"></span>
-            </a>
-
         </li>
 
 

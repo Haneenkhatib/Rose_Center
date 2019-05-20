@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => 'controlpanel'], function () {
+    Route::resource('/Services','ControlPanelControllers\ServicesController');
 });

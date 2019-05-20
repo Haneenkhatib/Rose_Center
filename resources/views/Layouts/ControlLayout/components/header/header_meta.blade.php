@@ -41,11 +41,14 @@
 <link href="{{asset('/control/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')}}" rel="stylesheet" type="text/css" />
 <link href="{{asset('/control/assets/global/plugins/bootstrap-sweetalert/sweetalert.css')}}" rel="stylesheet"
       type="text/css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <style>
-.errors{
-  color: red;
-}
-.danger{
-  color: red;
-}
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+    .required {
+        color: red;
+    }
+
 </style>
