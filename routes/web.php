@@ -17,6 +17,8 @@
 Route::group(['prefix' => 'controlpanel'], function () {
     Route::resource('/appointments','ControlPanelControllers\AppointmentController');
     Route::resource('/users','ControlPanelControllers\UserController');
+    Route::get('/userProfile/{id}','ControlPanelControllers\UserController@viewProfile')->name('user.profile');
+
 });
 
 
