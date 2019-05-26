@@ -6,6 +6,9 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+const User_PAGINATION = 10;
+
+
 class UserController extends Controller
 {
     /**
@@ -15,8 +18,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::all();
-        return view('controlpanel.User.index',['users'=>$users]);
+        $users= User::paginate(User_PAGINATION);
+        return view('controlpanel.User.index',
+            ['users'=>$users
+            ]);
     }
 
 

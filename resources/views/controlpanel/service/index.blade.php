@@ -11,11 +11,12 @@
 @section('body')
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fas fa-female"></i>All Services</h3>
+            <div class="portlet box green">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-shopping-cart"></i>Services </div>
                 </div>
-                <div class="panel-body">
+                <div class="portlet-body flip-scroll">
                     <table class="table table-bordered table-striped table-condensed flip-content">
                         <thead class="flip-content">
                         <tr>

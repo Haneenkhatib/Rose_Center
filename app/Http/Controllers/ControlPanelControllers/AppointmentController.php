@@ -6,6 +6,9 @@ use App\Appointment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+const Appointment_PAGINATION = 10;
+
+
 class AppointmentController extends Controller
 {
     /**
@@ -15,8 +18,11 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointments=Appointment::all();
-        return view('controlpanel.Appointment.index',['appointments'=>$appointments]);    }
+        $appointments = Appointment::paginate(Appointment_PAGINATION);
+        return view('controlpanel.Appointment.index',
+            ['appointments'=>$appointments
+            ]);
+    }
 
     /**
      * Show the form for creating a new resource.

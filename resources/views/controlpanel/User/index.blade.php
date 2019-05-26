@@ -30,6 +30,9 @@
                         @endforelse
                         </tbody>
                     </table>
+                    <div class="com-md-12 text-right">
+                        {{$users->links()}}
+                    </div>
                 </div>
             </div>
         </div>
