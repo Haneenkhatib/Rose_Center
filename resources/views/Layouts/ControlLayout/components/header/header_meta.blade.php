@@ -41,7 +41,18 @@
 <link href="{{asset('/control/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')}}" rel="stylesheet" type="text/css" />
 <link href="{{asset('/control/assets/global/plugins/bootstrap-sweetalert/sweetalert.css')}}" rel="stylesheet"
       type="text/css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <style>
+<<<<<<< HEAD
+    .error {
+        color: red;
+        margin-top: 10px;
+    }
+    .required {
+        color: red;
+    }
+
+=======
 .errors{
   color: red;
 }
@@ -57,4 +68,5 @@
 .page-header-fixed {
     background-color: #1d2124;
 }
+>>>>>>> 4e3239f2fd6f2710f29493bb4858822ca423d294
 </style>

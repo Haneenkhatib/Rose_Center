@@ -18,7 +18,6 @@ class ServicesTableSeeder extends Seeder
                 "title" => $faker->title,
                 "description" => $faker->text(200),
                 "price" =>$faker->numberBetween(10,70),
-                "active"=>$faker->boolean
             ]);
 
         }

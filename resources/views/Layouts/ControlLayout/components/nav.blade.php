@@ -18,18 +18,36 @@
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-shopping-cart"></i>
+<<<<<<< HEAD
+                <span class="title">Service</span>
+=======
                 <span class="title">Appointment</span>
+>>>>>>> 4e3239f2fd6f2710f29493bb4858822ca423d294
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
+<<<<<<< HEAD
+                    <a href="{{route('Services.index')}}" class="nav-link ">
+                        <i class="fa fa-female"></i>
+                        <span class="title">Show</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="{{route('Services.create')}}" class="nav-link ">
+                        <i class="fa fa-plus"></i>
+                        <span class="title">Add</span>
+=======
                     <a href="{{route('appointments.index')}}" class="nav-link ">
                         <i class="fa fa-circle"></i>
                         <span class="title">Show</span>
+>>>>>>> 4e3239f2fd6f2710f29493bb4858822ca423d294
                     </a>
                 </li>
             </ul>
         </li>
+<<<<<<< HEAD
+=======
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-user"></i>
@@ -45,6 +63,7 @@
                 </li>
             </ul>
         </li>
+>>>>>>> 4e3239f2fd6f2710f29493bb4858822ca423d294
 
         <!-- END SIDEBAR MENU -->
     <!-- END SIDEBAR MENU -->

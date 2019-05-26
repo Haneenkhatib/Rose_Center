@@ -52,8 +52,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="page-content-wrapper">
                     <!-- BEGIN CONTENT BODY -->
                     <div class="page-content">
-
-                            @yield('body')
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{session('error')}}
+                            </div>
+                        @elseif(session('success'))
+                            <div class="alert alert-success">
+                                {{session('success')}}
+                            </div>
+                        @endif
+                        @yield('body')
 
                     </div>
                     <!-- END CONTENT BODY -->
@@ -630,6 +638,7 @@ License: You must have a valid license purchased only from themeforest(the above
           <!--  FOOTER META ENDS -->
         <!-- BEGIN QUICK NAV -->
         @yield('script')
+        </div>
     </body>
 
 </html>
