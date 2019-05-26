@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title>Metronic Admin RTL Theme #1 | Bootstrap Form Controls</title>
+<title>Rose Center</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <meta content="Preview page of Metronic Admin RTL Theme #1 for bootstrap inputs, input groups, custom checkboxes and radio controls and more" name="description" />

@@ -90,4 +90,8 @@ class UserController extends Controller
     {
         //
     }
+    public function viewProfile($id){
+        $user=User::findOrFail($id);
+        return view('controlpanel.User.profile',['user'=>$user]);
+    }
 }

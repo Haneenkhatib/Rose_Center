@@ -18,20 +18,23 @@
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-shopping-cart"></i>
+<<<<<<< HEAD
                 <span class="title">Service</span>
+=======
+                <span class="title">Appointment</span>
+>>>>>>> 9a4d93209df570c0adc5704d98dc639dcb799f3b
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
+<<<<<<< HEAD
                     <a href="{{route('Services.index')}}" class="nav-link ">
                         <i class="fa fa-female"></i>
+=======
+                    <a href="{{route('appointments.index')}}" class="nav-link ">
+                        <i class="fa fa-show"></i>
+>>>>>>> 9a4d93209df570c0adc5704d98dc639dcb799f3b
                         <span class="title">Show</span>
-                    </a>
-                </li>
-                <li class="nav-item start ">
-                    <a href="{{route('Services.create')}}" class="nav-link ">
-                        <i class="fa fa-plus"></i>
-                        <span class="title">Add</span>
                     </a>
                 </li>
             </ul>
@@ -44,13 +47,41 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
+<<<<<<< HEAD
+                    <a href="{{route('Services.create')}}" class="nav-link ">
+                        <i class="fa fa-plus"></i>
+                        <span class="title">Add</span>
+=======
                     <a href="{{route('users.index')}}" class="nav-link ">
                         <i class="fa fa-circle"></i>
                         <span class="title">Show</span>
+>>>>>>> 9a4d93209df570c0adc5704d98dc639dcb799f3b
                     </a>
                 </li>
             </ul>
         </li>
+        <li class="nav-item start ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-user"></i>
+                <span class="title">Service</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item start ">
+                    <a href="{{route('Services.index')}}" class="nav-link ">
+                        <i class="fa fa-circle"></i>
+                        <span class="title">Show</span>
+                    </a>
+                </li>
+                <li class="nav-item start ">
+                    <a href="{{route('Services.create')}}" class="nav-link ">
+                        <i class="fa fa-plus"></i>
+                        <span class="title">Add</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+<<<<<<< HEAD
         <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-user"></i>
@@ -66,6 +97,9 @@
                 </li>
             </ul>
         </li>
+=======
+
+>>>>>>> 9a4d93209df570c0adc5704d98dc639dcb799f3b
         <!-- END SIDEBAR MENU -->
     <!-- END SIDEBAR MENU -->
     </ul>
