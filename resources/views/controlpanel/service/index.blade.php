@@ -29,7 +29,7 @@
                         </tr>
                         <tbody>
                         @forelse($services as $service)
-                        <tr>
+                        <tr id="service{{$service->id}}">
                         <td>{{$loop->iteration}}</td>
                         <td>{{$service->title}}</td>
                         <td>{{ str_limit($service->description, 20) }}</td>
@@ -40,7 +40,8 @@
                                     <i class="fa fa-edit"></i>
                                 </a>
                                 <a class="btn btn-danger delete-service"
-                                data-value="{{$service->id}}">
+                                data-id="{{$service->id}}"
+                                data-token="{{ csrf_token() }}">
                                 <i class="fa fa-trash"></i>
                                 </a>
                             </td>
@@ -63,18 +64,22 @@
 @section('script')
     <script>
         $('.delete-service').click(function () {
-            var id = $(this).data('value')
-            swal({
-                    title: "Are you sure?",
-                    text: "Your will not be able to recover this imaginary file!",
-                    type: "warning",
-                    showCancelButton: true,
-                    confirmButtonClass: "btn-danger",
-                    confirmButtonText: "Yes, delete it!",
-                    closeOnConfirm: false
-                },
-                function(){
-                    {{--window.location = '{{route('Services.destroy')}}/' + id--}}
+            var id = $(this).data("id");
+            var token = $(this).data("token");
+            console.log(id);
+            $.ajax(
+                {
+                    type: "DELETE",
+                    url: '{{ url('controlpanel/Services') }}/' + id,
+                    data: {_method: 'delete', _token: token},
+                    success: function (data) {
+                        console.log(data);
+                        $("#service" + id).remove();
+
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
                 });
         })
     </script>

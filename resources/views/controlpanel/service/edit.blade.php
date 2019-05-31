@@ -9,15 +9,16 @@
 @endsection
 
 @section('body')
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-edit"></i> Edit Service</h3>
-        </div>
-        <div class="panel-body">
-            <div class="row" >
-                <form action="{{route('Services.update',['id' => $service->id])}}" method="POST">
-                    @method('PUT')
-                    @csrf
+    <form action="{{route('Services.update',['id' => $service->id])}}" method="POST">
+        @method('PUT')
+        @csrf
+        <div class="portlet box green ">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-shopping-cart"></i> Update Service </div>
+            </div>
+            <div class="portlet-body form">
+                <div class="form-body">
                     <div class="form-group">
                         <label for="title">Title<span class="required">*</span></label>
                         <input type="text" class="form-control" name="title" value="{{$service->title}}">
@@ -25,7 +26,7 @@
                     </div>
                     <div class="form-group shadow-textarea">
                         <label for="Description">Description<span class="required">*</span></label>
-                        <textarea class="form-control" name="description" rows="3"></textarea>
+                        <textarea class="form-control" name="description" rows="3">{{$service->description}}</textarea>
                         <span class="error">{{$errors->first('description')}}</span>
                     </div>
                     <div class="form-group">
@@ -37,11 +38,9 @@
                         <input type="submit" name="store" value="Store" class="btn btn-primary">
                         <input type="reset" name="cancel" value="Cancel" class="btn btn-default">
                     </div>
-
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-
+    </form>
 
 @endsection

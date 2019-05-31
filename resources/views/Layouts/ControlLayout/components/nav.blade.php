@@ -24,7 +24,7 @@
             <ul class="sub-menu">
                 <li class="nav-item start ">
                     <a href="{{route('Services.index')}}" class="nav-link ">
-                        <i class="fa fa-female"></i>
+                        <i class="fa fa-circle"></i>
                         <span class="title">Show</span>
                     </a>
                 </li>
