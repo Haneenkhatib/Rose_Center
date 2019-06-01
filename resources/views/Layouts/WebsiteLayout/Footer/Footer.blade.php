@@ -15,7 +15,6 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 offset-xl-2 offset-lg-1 offset-md-0">
                             <div class="footer-widget list-widget">
-                                <h4 class="fw-title"><i class="flaticon-009-makeup-5"></i>Our Services</h4>
                                 <ul>
                                     <li><a href="">Spa</a></li>
                                     <li><a href="">Pedicure</a></li>

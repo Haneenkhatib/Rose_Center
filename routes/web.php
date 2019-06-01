@@ -20,7 +20,7 @@ Route::group(['prefix' => 'controlpanel'], function () {
 });
 
 Route::group(['prefix' => 'website'], function () {
-    Route::resource('/Services','WebsiteControllers\ServicesController');
+    Route::resource('/Service','WebsiteControllers\ServicesController');
 });
 
 

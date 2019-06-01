@@ -13,15 +13,7 @@
 @includeIf('Layouts.WebsiteLayout.header.header')
 <!-- intro section -->
 <section class="body-section" data-setbg="{{asset('websiteControl/img/intro-bg.jpg')}}">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-
-                @yield('body')
-
-            </div>
-        </div>
-    </div>
+    @yield('body')
 </section>
 
 @includeIf('Layouts.WebsiteLayout.Footer.Footer_meta')
