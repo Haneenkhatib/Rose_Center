@@ -11,7 +11,7 @@
 @section('body')
     <form action="{{route('Services.store')}}" method="POST">
         @csrf
-        <div class="portlet box blue ">
+        <div class="portlet box green ">
             <div class="portlet-title">
                 <div class="caption">
                     <i class="fa fa-shopping-cart"></i> Add Service </div>

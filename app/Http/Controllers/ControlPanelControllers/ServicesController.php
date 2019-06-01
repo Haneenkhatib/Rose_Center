@@ -73,7 +73,7 @@ class ServicesController extends Controller
             $service= Service::findOrFail($id);
             return view('controlpanel.service.edit', compact('service'));
         } catch (ModelNotFoundException $modelNotFoundException) {
-            return redirect()->route('controlpanel.Service.index')
+            return redirect()->route('Services.index')
                 ->with('error', 'service is not found');
         }
 
@@ -93,9 +93,9 @@ class ServicesController extends Controller
             $request->validate($this->rules($id), $this->messages());
             $service->fill($request->all());
             $service->update();
-            return redirect()->route('controlpanel.Service.index')->with('success', 'service successfully updated');
+            return redirect()->route('Services.index')->with('success', 'service successfully updated');
         } catch (ModelNotFoundException $modelNotFoundException) {
-            return redirect()->route('controlpanel.Service.index')->with('error', 'service is not found');
+            return redirect()->route('Services.index')->with('error', 'service is not found');
         }
     }
 
@@ -110,9 +110,13 @@ class ServicesController extends Controller
         try {
             $service = Service::findOrFail($id);
             $service->delete();
-            return redirect()->route('controlpanel.Service.index')->with('success', 'service successfully deleted');
+            return response()->json([
+                'success' => 'Service has been deleted successfully!'
+            ]);
         } catch (ModelNotFoundException $modelNotFoundException) {
-            return redirect()->route('controlpanel.Service.index')->with('error', 'service is not found');
+            return response()->json([
+                'error' => 'Service is not found !'
+            ]);
         }
 
     }
