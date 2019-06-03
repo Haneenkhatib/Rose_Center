@@ -1,8 +1,5 @@
 @extends('Layouts.WebsiteLayout.Layout')
 
-@section('style')
-@endsection
-
 @section('body')
     <!-- Page info section -->
     <section class="page-info-section set-bg" data-setbg="{{asset('websiteControl/img/page-top-bg/1.jpg')}}">
@@ -21,8 +18,8 @@
             @forelse($services as $service)
                     <div class="col-lg-4 col-md-6 service text-white">
                         <h2>{{$service->title}}</h2>
-                        <p>{{$service->description}}</p>
-                        <a href="#">More Info</a>
+                        <p>{{str_limit($service->description,20)}}</p>
+                        <a href="{{route('Service.show',$service->id)}}">More Info</a>
                     </div>
             @empty
                     <div class="col-lg-4 col-md-6 service text-white">

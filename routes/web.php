@@ -20,11 +20,7 @@ Route::group(['prefix' => 'controlpanel'], function () {
 });
 
 Route::group(['prefix' => 'website'], function () {
-<<<<<<< HEAD
     Route::resource('/Service','WebsiteControllers\ServicesController');
-=======
-//    Route::resource('/Services','WebsiteControllers\ServicesController');
->>>>>>> 7e34263f79a578cc08b1e48e5ea5712f386292a9
 });
 
 
