@@ -1,5 +1,13 @@
 @extends('Layouts.WebsiteLayout.Layout')
 
+<<<<<<< HEAD
+=======
+@section('style')
+    @parent
+@endsection
+
+
+>>>>>>> 4e115a8acd588b582150ce79f5a8bda184e9b029
 @section('body')
     <!-- Page info section -->
     <section class="page-info-section set-bg" data-setbg="{{asset('websiteControl/img/page-top-bg/1.jpg')}}">
@@ -29,6 +37,7 @@
             </div>
         </div>
     </section>
+    <br><br>
     <!-- Services section end -->
 
 

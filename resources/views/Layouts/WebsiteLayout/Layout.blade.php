@@ -3,7 +3,18 @@
 <head>
     <title>Rose Center</title>
     @includeIf('Layouts.WebsiteLayout.header.header_meta')
-    @yield('style')
+    @section('style')
+        <style>
+            .footer-section{
+                background-color: black;
+                padding-top:40px;
+            }
+            .col-lg-7 {
+                padding-bottom: 25px;
+            }
+
+        </style>
+    @show
 </head>
 <body>
 <!-- Page Preloder -->
