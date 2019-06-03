@@ -1,7 +1,9 @@
 @extends('Layouts.WebsiteLayout.Layout')
 
 @section('style')
+    @parent
 @endsection
+
 
 @section('body')
     <!-- Page info section -->
@@ -32,6 +34,7 @@
             </div>
         </div>
     </section>
+    <br><br>
     <!-- Services section end -->
 
 
