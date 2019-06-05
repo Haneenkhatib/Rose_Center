@@ -21,6 +21,7 @@ Route::group(['prefix' => 'controlpanel'], function () {
 
 Route::group(['prefix' => 'website'], function () {
     Route::resource('/Service','WebsiteControllers\ServicesController');
+    Route::resource('/appointment','WebsiteControllers\AppointmentController');
 });
 
 
