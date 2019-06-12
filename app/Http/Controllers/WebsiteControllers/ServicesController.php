@@ -50,7 +50,8 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('website.service.show', ['service' => Service::findOrFail($id)]);
+
     }
 
     /**
@@ -61,7 +62,7 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

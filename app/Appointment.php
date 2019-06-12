@@ -11,7 +11,7 @@ class Appointment extends Model
     protected $fillable = ['user_id', 'service_id','Date', 'Description'];
     protected $dates = ['created_at', 'updated_at','deleted_at'];
 
-    //users //appointments
+    //users //appointment
     public function user(){
         return $this->belongsTo("App\User");
     }

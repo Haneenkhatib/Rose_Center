@@ -12,13 +12,13 @@
         <!-- Navigation Menu -->
         <ul class="main-menu">
             <li><a href="home.html">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="{{route('about.index')}}">About Us</a></li>
             <li><a href="{{route('Service.index')}}">Services</a></li>
-            <li><a href="">Appointments</a></li>
+            <li><a href="{{route('appointment.index')}}">Appointments</a></li>
             <li><a href="">Contact</a></li>
         </ul>
         <div class="header-right">
-            <a href="" class="site-btn sb-big">Book an Appointment</a>
+            <a href="{{route('appointment.create')}}" class="site-btn sb-big">Book an Appointment</a>
         </div>
     </div>
 </header>

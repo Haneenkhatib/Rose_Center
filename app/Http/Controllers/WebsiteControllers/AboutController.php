@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\WebsiteControllers;
 
+use App\Aboutus;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AboutController extends Controller
 {
@@ -13,9 +15,10 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return view('website.aboutas.about', [
 
-        ]);
+        return view('website.Aboutus.about'
+
+            );
     }
 
     /**
