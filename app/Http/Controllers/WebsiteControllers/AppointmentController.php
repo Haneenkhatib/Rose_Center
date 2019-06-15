@@ -4,6 +4,7 @@ namespace App\Http\Controllers\WebsiteControllers;
 
 use App\Appointment;
 use App\Service;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -33,7 +34,7 @@ class AppointmentController extends Controller
     public function create()
     {
         $services=Service::all();
-        return view('website.Appointment.create',['services'=>$services]);
+        return view('website.Appointment.createap',['services'=>$services]);
     }
 
     /**
@@ -45,11 +46,11 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         $state=$request->validate($this->rules(),$this->messages());
-//        dd($state);
+//        dd($request->email);
         $appointment=new Appointment();
         $serviceid=DB::table('services')->where('title', $request->services)->value('id');
-        $userid=DB::table('users')->where('email', $request->email)->value('id');
-        $appointment->user_id=$userid;
+        $id = DB::table('users')->where('email', $request->email)->value('id');
+        $appointment->user_id=$id;
         $appointment->service_id=$serviceid;
         $appointment->date=$request->date;
         $appointment->Description=$request->description;
@@ -77,7 +78,14 @@ class AppointmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        try {
+            $appointment= Appointment::findOrFail($id);
+            $services=Service::all();
+            return view('website.Appointment.edit', ['appointment'=>$appointment,'services'=>$services]);
+        } catch (ModelNotFoundException $modelNotFoundException) {
+            return redirect()->route('appointment.index')
+                ->with('error', 'Appointment is not found');
+        }
     }
 
     /**
@@ -89,7 +97,15 @@ class AppointmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $appointment = Appointment::findOrFail($id);
+            $request->validate($this->rules($id), $this->messages());
+            $appointment->fill($request->all());
+            $appointment->update();
+            return redirect()->route('appointment.index')->with('success', 'Appointment successfully updated');
+        } catch (ModelNotFoundException $modelNotFoundException) {
+            return redirect()->route('appointment.index')->with('error', 'Appointment is not found');
+        }
     }
 
     /**
@@ -100,12 +116,21 @@ class AppointmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $appointment= Appointment::findOrFail($id);
+            $appointment->delete();
+            return response()->json([
+                'success' => 'Appointment has been deleted successfully!'
+            ]);
+        } catch (ModelNotFoundException $modelNotFoundException) {
+            return response()->json([
+                'error' => 'Appointment is not found !'
+            ]);
+        }
     }
     private function rules()
     {
         $rules = [
-            'name' => 'required',
             'email' => 'required',
             'services' => 'required',
             'date' => 'required',
@@ -122,7 +147,6 @@ class AppointmentController extends Controller
     private function messages()
     {
         return [
-            'name.required' =>'Name is required',
             'email.required' =>'Email is required',
             'services.required' =>'Select Service',
             'date.required' =>'Date is required',
