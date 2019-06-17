@@ -57,6 +57,11 @@
             <div class="form">
                 <form class="fw-contact-form" action="{{route('appointment.store')}}" method="post" >
                     @csrf
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <span class="error">{{$errors->first('name')}}</span>
+                    </div>
                     <div class="cf-inputs">
                         <div class="cf-input">
                             <input type="text" placeholder="Your Name*" name="name">

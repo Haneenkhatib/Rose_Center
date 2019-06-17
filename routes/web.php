@@ -20,10 +20,16 @@ Route::group(['prefix' => 'controlpanel'], function () {
 });
 
 Route::group(['prefix' => 'website'], function () {
+
+
     Route::resource('/Service','WebsiteControllers\ServicesController');
     Route::resource('/appointment','WebsiteControllers\AppointmentController');
+<<<<<<< HEAD
     Route::view('/contact', 'website\contact')->name('contact');
     Route::view('/rosecenter', 'website\rosecenter')->name('rosecenter');
+=======
+    Route::resource('/about','WebsiteControllers\AboutController');
+>>>>>>> 7c1ab234a41014093510b048c26759b9962fdaf5
 });
 
 
