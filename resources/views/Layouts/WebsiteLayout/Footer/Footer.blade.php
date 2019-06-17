@@ -34,11 +34,24 @@
                             </div>
                         </div>
                 </div>
-                <div class="col-xl-4 col-lg-5 offset-xl-1 offset-lg-0 offset-md-0">
+
+                <div class="col-xl-4 col-lg-6 offset-xl-0 offset-lg-1 offset-md-1">
                     <div class="footer-widget contact-widget">
                         <h4 class="fw-title">Contact Info</h4>
-                        <p>In vitae nisleo a, volu- tpat sem.  dui fermentum eros hendrerit, id lobortis leo volutpat.</p>
+                        <div><i class="fas fa-square fa-stack-2x" style="color: #e32a63;"></i>
+                            <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                            <p class="ca-text" style="color: #4a4a4a;"> 4127 Raoul Wallenber4 <br></p></div>
+                        <br>
+                        <div>
+                            <i class="fas fa-square fa-stack-2x" style="color: #e32a63;"></i>
+                            <i class="fas fa-phone fa-flip-horizontal fa-stack-1x fa-inverse"></i>
+                            <p class="ca-text" style="color: #4a4a4a;">   203-808-8613</p>
+                        </div>
+                        <br>
+
                     </div>
+                    </div>
+
                 </div>
             </div>
         </div>

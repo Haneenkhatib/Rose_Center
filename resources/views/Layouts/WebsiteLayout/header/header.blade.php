@@ -11,13 +11,8 @@
         </div>
         <!-- Navigation Menu -->
         <ul class="main-menu">
-<<<<<<< HEAD
             <li><a href="{{route('rosecenter')}}">Home</a></li>
-            <li><a href="">About Us</a></li>
-=======
-            <li><a href="home.html">Home</a></li>
             <li><a href="{{route('about.index')}}">About Us</a></li>
->>>>>>> 7c1ab234a41014093510b048c26759b9962fdaf5
             <li><a href="{{route('Service.index')}}">Services</a></li>
             <li><a href="{{route('appointment.index')}}">Appointments</a></li>
             <li><a href="{{route('contact')}}">Contact</a></li>
