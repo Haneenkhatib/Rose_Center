@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+
+        <style>
+            .footer-section{
+                background-color: black;
+                padding-top:40px;
+            }
+            .col-lg-7 {
+                padding-bottom: 25px;
+            }
+
+        </style>
+
+</head>
 <!-- Footer section -->
-<footer class="footer-section set-bg" >
+<footer class="footer-section set-bg ">
     <div class="footer-warp">
         <div class="footer-widgets">
             <div class="row">

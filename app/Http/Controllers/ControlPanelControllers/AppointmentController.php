@@ -22,6 +22,7 @@ class AppointmentController extends Controller
         return view('controlpanel.Appointment.index',
             ['appointments'=>$appointments
             ]);
+
     }
 
     /**
