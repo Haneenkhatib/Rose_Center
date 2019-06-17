@@ -7,6 +7,7 @@ use App\Service;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 const Appointment_PAGINATION = 10;
@@ -49,8 +50,8 @@ class AppointmentController extends Controller
 //        dd($request->email);
         $appointment=new Appointment();
         $serviceid=DB::table('services')->where('title', $request->services)->value('id');
-        $id = DB::table('users')->where('email', $request->email)->value('id');
-        $appointment->user_id=$id;
+//        $id = DB::table('users')->where('email', $request->email)->value('id');
+        $appointment->user_id=Auth::id();
         $appointment->service_id=$serviceid;
         $appointment->date=$request->date;
         $appointment->Description=$request->description;
@@ -131,7 +132,7 @@ class AppointmentController extends Controller
     private function rules()
     {
         $rules = [
-            'email' => 'required',
+//            'email' => 'required',
             'services' => 'required',
             'date' => 'required',
             'description' => 'required',
@@ -147,7 +148,7 @@ class AppointmentController extends Controller
     private function messages()
     {
         return [
-            'email.required' =>'Email is required',
+//            'email.required' =>'Email is required',
             'services.required' =>'Select Service',
             'date.required' =>'Date is required',
             'description.required' =>'Description is required',

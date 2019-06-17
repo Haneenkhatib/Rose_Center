@@ -31,7 +31,7 @@
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
                             <a href="">
-                            {{--<a href="{{route('admin.profile')}}">--}}
+                            <a href="{{route('user.profile',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
                                 <i class="icon-user"></i> My Profile </a>
                         </li>
                         <li class="divider"></li>
@@ -49,8 +49,8 @@
                 <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                 <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                 <li class="dropdown dropdown-quick-sidebar-toggler">
-                    <a>
-                    {{--<a href="{{route('logout.custom')}}" class="dropdown-toggle">--}}
+                    <a href="{{route('logout.custom')}}">
+{{--                    <a href="{{route('logout.custom')}}" class="dropdown-toggle">--}}
                         <i class="icon-logout"></i>
                     </a>
                 </li>

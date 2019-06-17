@@ -50,10 +50,10 @@
                     <div class="col-md-4" style="margin: auto">
                         <form class="fw-contact-form" action="{{route('appointment.store')}}" method="post" >
                             @csrf
-                            <div class="form-group">
-                            <input  type="email" class="form-control" name="email" placeholder="Email *" value="{{old('email')}}">
-                                <span class="error">{{$errors->first('email')}}</span>
-                            </div>
+                            {{--<div class="form-group">--}}
+                            {{--<input  type="email" class="form-control" name="email" placeholder="Email *" value="{{old('email')}}">--}}
+                                {{--<span class="error">{{$errors->first('email')}}</span>--}}
+                            {{--</div>--}}
                             <div class="form-group">
                                 <select name="services"  class="form-control" value="{{old('services')}}">
                                     <option value="-1">Select Service * </option>

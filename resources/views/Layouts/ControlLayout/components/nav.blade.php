@@ -16,6 +16,13 @@
         </li>
         <!-- END SIDEBAR TOGGLER BUTTON -->
         <li class="nav-item start ">
+            <a href="{{route('home')}}" class="nav-link nav-toggle">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="title">Dashboard</span>
+                <span class="arrow"></span>
+            </a>
+        </li>
+        <li class="nav-item start ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-shopping-cart"></i>
                 <span class="title">Service</span>
