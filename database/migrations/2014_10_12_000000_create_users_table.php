@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('email')->unique();
             $table->string('photo')->nullable();
-            $table->enum('type', ['E', 'C','A']);
+            $table->enum('type', ['C','A']);
             $table->timestamps();
             $table->softDeletes();
         });

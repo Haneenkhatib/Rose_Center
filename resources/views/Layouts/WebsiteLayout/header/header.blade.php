@@ -19,7 +19,7 @@
         </ul>
         <div class="header-right">
             <a href="{{route('appointment.create')}}" class="site-btn sb-big">Book an Appointment</a>
-            <a href="{{route('logout.custom')}}" class=""><i class="fas fa-sign-out-alt" style="color: #e32a63">out</i></a>
+            <a href="{{route('logout.custom')}}" class=""><i class="fas fa-sign-out-alt" style="color: #e32a63; margin-left: 10px"></i></a>
         </div>
     </div>
 </header>

@@ -21,10 +21,9 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $appointments = Appointment::paginate(Appointment_PAGINATION);
+        $appointments=Appointment::where('user_id',Auth::id())->get();
         return view('website.Appointment.index',
-            ['appointments'=>$appointments
-            ]);
+            ['appointments'=>$appointments]);
     }
 
     /**
