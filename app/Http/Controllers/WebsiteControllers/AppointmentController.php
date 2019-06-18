@@ -49,7 +49,6 @@ class AppointmentController extends Controller
 //        dd($request->email);
         $appointment=new Appointment();
         $serviceid=DB::table('services')->where('title', $request->services)->value('id');
-//        $id = DB::table('users')->where('email', $request->email)->value('id');
         $appointment->user_id=Auth::id();
         $appointment->service_id=$serviceid;
         $appointment->date=$request->date;
@@ -80,8 +79,8 @@ class AppointmentController extends Controller
     {
         try {
             $appointment= Appointment::findOrFail($id);
-            $services=Service::all();
-            return view('website.Appointment.edit', ['appointment'=>$appointment,'services'=>$services]);
+            $servicess=Service::all();
+            return view('website.Appointment.edit', ['appointment'=>$appointment,'servicess'=>$servicess]);
         } catch (ModelNotFoundException $modelNotFoundException) {
             return redirect()->route('appointment.index')
                 ->with('error', 'Appointment is not found');
@@ -100,7 +99,12 @@ class AppointmentController extends Controller
         try {
             $appointment = Appointment::findOrFail($id);
             $request->validate($this->rules($id), $this->messages());
-            $appointment->fill($request->all());
+            $serviceid=DB::table('services')->where('title', $request->services)->value('id');
+            $appointment->user_id=Auth::id();
+            $appointment->service_id=$serviceid;
+            $appointment->date=$request->date;
+            $appointment->Description=$request->description;
+//            $appointment->fill($request->all());
             $appointment->update();
             return redirect()->route('appointment.index')->with('success', 'Appointment successfully updated');
         } catch (ModelNotFoundException $modelNotFoundException) {

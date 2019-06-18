@@ -43,9 +43,9 @@
                             <td> {{Carbon\Carbon::parse($appointment
                     ->date)->format("y-m-d D")}} </td>
                             <td style="text-align: center">
-                                {{--<a class="btn btn-primary" href="{{route('appointment.edit',['id' =>$appointment->id ])}}">--}}
-                                    {{--<i class="fa fa-edit"></i>--}}
-                                {{--</a>--}}
+                                <a class="btn btn-primary" href="{{route('appointment.edit',['id' =>$appointment->id ])}}">
+                                    <i class="fa fa-edit"></i>
+                                </a>
                                 <a class="btn btn-danger delete-appointment"
                                    data-id="{{$appointment->id}}"
                                    data-token="{{ csrf_token() }}">

@@ -52,14 +52,14 @@
                         @method('PUT')
                         @csrf
                         <div class="form-group">
-                            <input  type="email" class="form-control" name="email" placeholder="Email *" value="{{$appointment->email}}">
-                            <span class="error">{{$errors->first('email')}}</span>
-                        </div>
-                        <div class="form-group">
                             <select name="services"  class="form-control" value="{{$appointment->services}}">
-                                <option value="-1">Select Service * </option>
-                                @foreach($services as $service)
-                                    <option value="{{$service->title}}">{{$service->title}}</option>
+                                {{--<option value="-1">Select Service * </option>--}}
+                                @foreach($servicess as $service)
+                                    @if ($service->title === $appointment->services)
+                                        <option value="{{ $service->title }}" selected>{{ $service->title }}</option>
+                                    @else
+                                        <option value="{{$service->title }}">{{ $service->title }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                             <span class="error">{{$errors->first('services')}}</span>
@@ -69,10 +69,11 @@
                             <span class="error">{{$errors->first('date')}}</span>
                         </div>
                         <div>
-                            <textarea placeholder="Your Message*" name="description">{{$appointment->description}}</textarea>
+
+                            <textarea placeholder="Your Message*" name="description">{{$appointment->Description}}</textarea>
                             <span class="error">{{$errors->first('description')}}<br></span>
                         </div>
-                        <button class="site-btn" name="submit">Save</button>
+                        <button class="site-btn" name="submit">update</button>
                     </form>
                 </div>
             </div>
