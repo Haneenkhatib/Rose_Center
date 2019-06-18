@@ -18,7 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users= User::paginate(User_PAGINATION);
+        $users=User::where('type','C')->get();
+//        $users= User::paginate(User_PAGINATION);
         return view('controlpanel.User.index',
             ['users'=>$users
             ]);
