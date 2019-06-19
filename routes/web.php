@@ -28,6 +28,7 @@ Route::group(['prefix' => 'website','middleware'=>'auth'], function () {
     Route::resource('/appointment','WebsiteControllers\AppointmentController');
     Route::view('/contact', 'website\contact')->name('contact');
     Route::view('/home', 'website\rosecenter')->name('home');
+    Route::get('/userProfile/{id}','WebsiteControllers\UserController@viewProfile')->name('user.profile');
 
     Route::resource('/about','WebsiteControllers\AboutController');
     Route::get('/logout/custom', ['as' => 'logout.custom', 'uses' => 'Controller@userLogout']);

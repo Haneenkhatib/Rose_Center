@@ -50,15 +50,10 @@
                     <div class="col-md-4" style="margin: auto">
                         <form class="fw-contact-form" action="{{route('appointment.store')}}" method="post" >
                             @csrf
-                            {{--<div class="form-group">--}}
-                            {{--<input  type="email" class="form-control" name="email" placeholder="Email *" value="{{old('email')}}">--}}
-                                {{--<span class="error">{{$errors->first('email')}}</span>--}}
-                            {{--</div>--}}
                             <div class="form-group">
                                 <select name="services"  class="form-control" value="{{old('services')}}">
-                                    <option value="-1">Select Service * </option>
-                                    @foreach($services as $service)
-                                        <option value="{{$service->title}}">{{$service->title}}</option>
+                                    @foreach($servicess as $service)
+                                        <option value="{{$service->title}}" {{ old('services',$service->title)==$service->title ? 'selected' : ''  }}>{{$service->title}}</option>
                                     @endforeach
                                 </select>
                                 <span class="error">{{$errors->first('services')}}</span>

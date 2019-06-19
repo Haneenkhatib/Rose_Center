@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="index.html">
+            <a href="{{route('home')}}">
                 <img src="{{asset('websiteControl/img/Rose_logo.png')}}" alt="logo" class="logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <span></span>
@@ -30,17 +30,12 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="">
                             <a href="{{route('user.profile',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
                                 <i class="icon-user"></i> My Profile </a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="page_user_lock_1.html">
-                                <i class="icon-lock"></i> Lock Screen </a>
-                        </li>
-                        <li>
-                            <a href="page_user_login_1.html">
+                            <a href="{{route('logout.custom')}}">
                                 <i class="icon-key"></i> Log Out </a>
                         </li>
                     </ul>

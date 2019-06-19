@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('photo')->nullable();
             $table->enum('type', ['C','A']);
+            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });

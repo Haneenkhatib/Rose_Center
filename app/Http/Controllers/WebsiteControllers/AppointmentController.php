@@ -33,8 +33,8 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        $services=Service::all();
-        return view('website.Appointment.createap',['services'=>$services]);
+        $servicess=Service::all();
+        return view('website.Appointment.createap',['servicess'=>$servicess]);
     }
 
     /**
