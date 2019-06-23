@@ -21,7 +21,7 @@
                         @forelse($appointments as $appointment)
                             <tr>
                                 <td> {{$loop->iteration}} </td>
-                                <td> {{$appointment->user['name']}}</td>
+                                <td> {{$appointment->user->name}}</td>
 {{--                                {{dd($appointment->service->title)}}--}}
                                 <td>{{$appointment->service['title']}}</td>
                                 <td> {{Carbon\Carbon::parse($appointment

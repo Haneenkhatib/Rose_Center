@@ -16,10 +16,11 @@
             <li><a href="{{route('Service.index')}}">Services</a></li>
             <li><a href="{{route('appointment.index')}}">Appointments</a></li>
             <li><a href="{{route('contact')}}">Contact</a></li>
-            <li><a href="{{route('user.profile',['id'=>\Illuminate\Support\Facades\Auth::id()])}}">Profile</a></li>
+            {{--<li><a href="{{route('user.profile',['id'=>\Illuminate\Support\Facades\Auth::id()])}}">Profile</a></li>--}}
         </ul>
         <div class="header-right">
             <a href="{{route('appointment.create')}}" class="site-btn sb-big">Book an Appointment</a>
+            <a href="{{route('user.profile',['id'=>\Illuminate\Support\Facades\Auth::id()])}}" class=""><i class="fa fa-user" style="color: #e32a63; margin-left: 10px"></i></a>
             <a href="{{route('logout.custom')}}" class=""><i class="fas fa-sign-out-alt" style="color: #e32a63; margin-left: 10px"></i></a>
         </div>
     </div>

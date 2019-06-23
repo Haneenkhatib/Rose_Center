@@ -14,7 +14,7 @@
         </section>
         <!-- Page info section end -->
         <!-- Services section -->
-        <section class="services-section spad set-bg" data-setbg="{{asset('websiteControl/img/service-bg.png')}}">
+        <section class="services-section spad set-bg">
             <div class="container">
                 <div class="section-title text-white">
                     <h2>Our Services</h2>

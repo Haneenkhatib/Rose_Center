@@ -31,10 +31,7 @@ class HomeController extends Controller
             return view('website.rosecenter');
 
         }else if ($user->type=='A'){
-            $usersnum = DB::table('users')->where('type','C')->count();
-            $appointmentsnum =DB::table('appointments')->count();
-            return view('controlpanel.home',
-                ['usernum'=>$usersnum , 'appointmentsnum'=> $appointmentsnum]);
+            return view('controlpanel.home');
 
         }
     }
