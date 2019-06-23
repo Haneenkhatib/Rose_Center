@@ -15,7 +15,7 @@ Route::group(['prefix' => 'controlpanel','middleware'=>'auth'], function () {
     Route::resource('/Services','ControlPanelControllers\ServicesController');
     Route::resource('/appointments','ControlPanelControllers\AppointmentController');
     Route::resource('/users','ControlPanelControllers\UserController');
-    Route::get('/userProfile/{id}','ControlPanelControllers\UserController@viewProfile')->name('user.profile');
+    Route::get('/userProfile/{id}','ControlPanelControllers\UserController@viewProfile')->name('admin.profile');
     Route::resource('/Services','ControlPanelControllers\ServicesController');
     Route::view('/home', 'controlpanel\home')->name('home');
 

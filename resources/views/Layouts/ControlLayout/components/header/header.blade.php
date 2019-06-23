@@ -30,7 +30,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="{{route('user.profile',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
+                            <a href="{{route('admin.profile',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
                                 <i class="icon-user"></i> My Profile </a>
                         </li>
                         <li class="divider"></li>
