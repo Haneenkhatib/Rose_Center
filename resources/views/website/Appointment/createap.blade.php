@@ -52,7 +52,7 @@
                             @csrf
                             <div class="form-group">
                                 <select name="services"  class="form-control" value="{{old('services')}}">
-                                 <option>Select Service*</option>
+                                 {{--<option value="0">Select Service*</option>--}}
                                     @foreach($servicess as $service)
                                         <option value="{{$service->title}}" {{ old('services',$service->title)==$service->title ? 'selected' : ''  }}>{{$service->title}}</option>
                                     @endforeach

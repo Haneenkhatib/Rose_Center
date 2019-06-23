@@ -53,9 +53,8 @@
                         @csrf
                         <div class="form-group">
                             <select name="services"  class="form-control" value="{{$appointment->services}}">
-                                {{--<option value="-1">Select Service * </option>--}}
                                 @foreach($servicess as $service)
-                                    @if ($service->title === $appointment->services)
+                                    @if ( $appointment->service->title ==$service->title)
                                         <option value="{{ $service->title }}" selected>{{ $service->title }}</option>
                                     @else
                                         <option value="{{$service->title }}">{{ $service->title }}</option>

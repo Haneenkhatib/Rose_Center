@@ -80,6 +80,7 @@ class AppointmentController extends Controller
         try {
             $appointment= Appointment::findOrFail($id);
             $servicess=Service::all();
+//            dd($appointment->service->title);
             return view('website.Appointment.edit', ['appointment'=>$appointment,'servicess'=>$servicess]);
         } catch (ModelNotFoundException $modelNotFoundException) {
             return redirect()->route('appointment.index')
