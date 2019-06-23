@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -30,7 +31,10 @@ class HomeController extends Controller
             return view('website.rosecenter');
 
         }else if ($user->type=='A'){
-            return view('controlpanel.home');
+            $usersnum = DB::table('users')->where('type','C')->count();
+            $appointmentsnum =DB::table('appointments')->count();
+            return view('controlpanel.home',
+                ['usernum'=>$usersnum , 'appointmentsnum'=> $appointmentsnum]);
 
         }
     }
