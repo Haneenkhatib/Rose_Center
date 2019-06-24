@@ -5,6 +5,9 @@
         .form-group {
             margin-right: 20px;
         }
+        .error{
+            color: red;
+        }
     </style>
 @endsection
 
@@ -20,17 +23,17 @@
                 <div class="form-body">
                     <div class="form-group">
                         <label for="title">Title<span class="required">*</span></label>
-                        <input type="text" class="form-control" name="title" >
+                        <input type="text" class="form-control" name="title" value="{{old('title')}}">
                         <span class="error">{{$errors->first('title')}}</span>
                     </div>
                     <div class="form-group shadow-textarea">
                         <label for="Description">Description<span class="required">*</span></label>
-                        <textarea class="form-control" name="description" rows="3"></textarea>
+                        <textarea class="form-control" name="description" rows="3">{{old('description')}}</textarea>
                         <span class="error">{{$errors->first('description')}}</span>
                     </div>
                     <div class="form-group">
                         <label for="price">Price<span class="required">*</span></label>
-                        <input type="text" class="form-control" name="price">
+                        <input type="text" class="form-control" name="price" value="{{old('price')}}">
                         <span class="error">{{$errors->first('price')}}</span>
                     </div>
                     <div class="form-action">

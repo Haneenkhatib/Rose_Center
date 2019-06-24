@@ -5,6 +5,9 @@
         .form-group {
             margin-right: 20px;
         }
+        .error{
+            color: red;
+        }
     </style>
 @endsection
 
