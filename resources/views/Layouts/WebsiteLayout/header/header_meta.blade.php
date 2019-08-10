@@ -14,7 +14,12 @@
 <link rel="stylesheet" href="{{asset('websiteControl/css/owl.carousel.css')}}"/>
 <link rel="stylesheet" href="{{asset('websiteControl/css/style.css')}}"/>
 <link rel="stylesheet" href="{{asset('websiteControl/css/animate.css')}}"/>
+<<<<<<< HEAD
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+=======
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+>>>>>>> 7f23fa6adac00ec9af732b362ce8efc1ca3173bc
 {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">--}}
 
 
@@ -22,4 +27,6 @@
 <script src="{{asset('websiteControl/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <![endif]-->
