@@ -39,7 +39,7 @@
                     @forelse($appointments as $appointment)
                         <tr id="appointment{{$appointment->id}}">
                             <td> {{$loop->iteration}} </td>
-                            <td> {{$appointment->service->title}}</td>
+                            <td> {{$appointment->service['title']}}</td>
                             <td> {{Carbon\Carbon::parse($appointment
                     ->date)->format("y-m-d D")}} </td>
                             <td style="text-align: center">

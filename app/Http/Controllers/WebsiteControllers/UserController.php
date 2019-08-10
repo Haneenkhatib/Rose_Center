@@ -47,7 +47,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user=User::findOrFail($id);
+        return view('website.User.profile',['user'=>$user]);
     }
 
     /**
@@ -83,8 +84,7 @@ class UserController extends Controller
     {
         //
     }
-    public function viewProfile($id){
-    $user=User::findOrFail($id);
-    return view('website.User.profile',['user'=>$user]);
-}
+//    public function viewProfile($id){
+//
+//}
 }

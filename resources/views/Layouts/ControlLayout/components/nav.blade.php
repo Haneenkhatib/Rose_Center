@@ -52,7 +52,7 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item start ">
-                    <a href="{{route('users.index')}}" class="nav-link ">
+                    <a href="{{url('/controlpanel/users')}}" class="nav-link ">
                         <i class="fa fa-circle"></i>
                         <span class="title">Show</span>
                     </a>

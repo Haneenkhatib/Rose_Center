@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+//    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -64,11 +67,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+//        Role::create(['name'=>'admin']);
+//        Role::create(['name'=>'user']);
+//        Permission::create(['name'=>'control services']);
+//        Permission::create(['name'=>'control appointments']);
+//        Permission::create(['name'=>'control users']);
+//        Permission::create(['name'=>'manage appointment']);
+//        Permission::create(['name'=>'show services']);
+
+        $role =  (strpos($data['email'], 'rosecenter')!== false)?'admin' : 'user';
+
+        $user=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-
-        ]);
+        ])->assignRole($role);
+        return $user;
+    }
+    protected function redirectTo()
+    {
+        $user = Auth::user();
+        if($user->hasRole('user')){
+            return 'website/home';
+        }else{
+            return 'controlpanel/home';
+        }
     }
 }

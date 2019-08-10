@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\ControlPanelControllers;
+namespace App\Http\Controllers\WebsiteControllers;
 
-use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-const User_PAGINATION = 10;
-
-
-class UserController extends Controller
+class NotificationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,15 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::where('email','not like','%rose%')->get();
-
-//        $users=User::hasRole('user')->get();
-//        $users= User::paginate(User_PAGINATION);
-        return view('controlpanel.User.index',
-            ['users'=>$users
-            ]);
+        return view('website.Notifications.index');
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -57,8 +46,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user=User::findOrFail($id);
-        return view('controlpanel.User.profile',['user'=>$user]);
+        //
     }
 
     /**
@@ -94,7 +82,4 @@ class UserController extends Controller
     {
         //
     }
-//    public function viewProfile($id){
-//
-//    }
 }

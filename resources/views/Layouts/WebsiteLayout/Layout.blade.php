@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://kit.fontawesome.com/94db484ed9.js"></script>
     <title>Rose Center</title>
     @includeIf('Layouts.WebsiteLayout.header.header_meta')
     @section('style')
@@ -21,7 +20,7 @@
 <body>
 <!-- Page Preloder -->
 <div id="preloder">
-    <div class="loader"></div>
+{{--    <div class="loader"></div>--}}
 </div>
 @includeIf('Layouts.WebsiteLayout.header.header')
 <!-- intro section -->

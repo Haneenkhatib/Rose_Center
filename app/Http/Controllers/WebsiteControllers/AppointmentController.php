@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\WebsiteControllers;
 
 use App\Appointment;
+use App\Mail\AppointmentMail;
+use App\Notifications\bookAppointment;
 use App\Service;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 const Appointment_PAGINATION = 10;
 
@@ -45,16 +48,21 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
-        $state=$request->validate($this->rules(),$this->messages());
-//        dd($request->email);
-        $appointment=new Appointment();
-        $serviceid=DB::table('services')->where('title', $request->services)->value('id');
-        $appointment->user_id=Auth::id();
-        $appointment->service_id=$serviceid;
-        $appointment->date=$request->date;
-        $appointment->Description=$request->description;
-        $appointment->save();
-        return redirect()->back()->with('success', 'Appointment added successfully!');
+        $data=$request->validate($this->rules(),$this->messages());
+//        dd($date);
+        if($data) {
+            $appointment = new Appointment();
+            $serviceid = DB::table('services')->where('title', $request->services)->value('id');
+            $appointment->user_id = Auth::id();
+            $appointment->service_id = $serviceid;
+            $appointment->date = $request->date;
+            $appointment->Description = $request->description;
+            $appointment->save();
+
+            Mail::to(Auth::user()->email)->send(new AppointmentMail($data));
+            Auth::user()->notify(new bookAppointment($appointment));
+            return redirect()->back()->with('success', 'Appointment added successfully!');
+        }
 
     }
 

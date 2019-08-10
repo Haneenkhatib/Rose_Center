@@ -14,6 +14,7 @@
                             <th> # </th>
                             <th> Name </th>
                             <th> Email </th>
+                            <th> Appointments# </th>
                             <th> Created_at </th>
                         </tr>
                         </thead>
@@ -23,6 +24,7 @@
                                 <td> {{$loop->iteration}} </td>
                                 <td> {{$user->name}}</td>
                                 <td> {{$user->email}}</td>
+                                <td> {{$user->appointments->count()}}</td>
                                 <td> {{Carbon\Carbon::parse($user
                 ->created_at)->format("y-m-d D")}} </td>
                                 @empty

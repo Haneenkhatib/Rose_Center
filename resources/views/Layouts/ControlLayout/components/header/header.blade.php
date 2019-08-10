@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="{{route('home')}}">
+            <a href="{{route('admin.home')}}">
                 <img src="{{asset('websiteControl/img/Rose_logo.png')}}" alt="logo" class="logo-default"/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <span></span>
@@ -30,7 +30,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="{{route('admin.profile',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
+                            <a href="{{route('users.show',['id' => \Illuminate\Support\Facades\Auth::id()])}}">
                                 <i class="icon-user"></i> My Profile </a>
                         </li>
                         <li class="divider"></li>
